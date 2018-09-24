@@ -1,0 +1,128 @@
+<style>
+	*{
+		font-family: "微软雅黑";
+	}
+	ul li{
+		list-style: none;
+	}
+</style>
+<h1>ToDoList</h1>
+<article>
+	<input type="text" name="txt" id="txt" placeholder="请输入要干的事"/>
+</article>
+<article>
+	<h3>What need to do&nbsp;<input type="button" id="bun1" /></h3>
+	<ul id="doo">
+	</ul>
+</article>
+<article>
+	<h3>What has been down&nbsp;<input type="button" id="bun2" /></h3>
+	<ul id="done">
+	</ul>
+</article>
+<script>
+	
+		var txt = document.getElementById('txt');
+		var doo = document.getElementById('doo');
+		var dee = document.getElementById('done');
+		var bun1 = document.getElementById('bun1');
+		var bun2 = document.getElementById('bun2');
+		bun1.value = localStorage.getItem('i');
+		bun2.value = localStorage.getItem('i-done');
+		var ii;
+		var text1;
+		if(!ii){ii = 0}
+		if(!localStorage.getItem('i')||localStorage.getItem('i')<0){
+			localStorage.setItem('i',0)
+		}
+		if(!localStorage.getItem('i-done')||localStorage.getItem('i-done')<0){
+			localStorage.setItem('i-done',0)
+		}
+		var list = [];
+		if(localStorage.getItem('list')){
+			var arr = localStorage.getItem('list').split(',');
+			
+			for(var i=0;i<arr.length;i++){//根据本地存储的list循环添加节点到to do的子节点
+				(function(i){
+					var newn = document.createElement('div');
+					newn.innerHTML = arr[i];
+					newn.id = 'idd'+i;
+					doo.appendChild(newn);
+					newn.onclick = function(){//给每个新增的div绑定点击事件：在to do中删除，done中添加
+						
+							var num1 = Number(localStorage.getItem("i-done"));//*****
+							num1++;
+							localStorage.setItem('i-done',num1);
+							bun2.value = localStorage.getItem('i-done');//*****
+						
+						if(!localStorage.getItem('list-done')){
+							localStorage.setItem('list-done',arr);//点击后在本地存储一个列表done，内容为本地的list
+						}
+						else{
+							var list2 = localStorage.getItem('list-done').split(',');
+							list2.push(arr[i]);
+							localStorage.setItem('list-done',list2);
+						}
+						
+						var values = localStorage.getItem('list').split(',')[i];
+						var num = localStorage.getItem("i");
+						num--;
+						localStorage.setItem('i',num);
+						var iid = 'idd'+i;
+						var del = document.getElementById(iid);
+						doo.removeChild(del)//删除被点击的节点
+						var arr1 = localStorage.getItem('list').split(',')
+						arr1.splice(i,1);
+						localStorage.setItem('list',arr1);
+						var length1 = localStorage.getItem('list').split(',').length
+						history.go(0);
+						
+					}
+				}(i))
+			}
+		}
+		if(localStorage.getItem('list-done')){//页面刷新时将本地存储的list-done数组中的内容添加到done下的子节点中
+			var arr1 = localStorage.getItem('list-done').split(',');
+			for(var i = 0;i<arr1.length;i++){
+				(function(i){
+					var newn1 = document.createElement('div');
+					var values1 = localStorage.getItem('list-done').split(',')[i];
+					newn1.innerHTML = values1;
+					done.appendChild(newn1);
+					newn1.onclick = function(){//done的子节点被点击后删除自身并写入本地，刷新页面
+						
+						var num1 = Number(localStorage.getItem("i-done"));
+						num1--;
+						localStorage.setItem('i-done',num1);
+						
+						var arr1 = localStorage.getItem('list-done').split(',')
+						arr1.splice(i,1);
+						localStorage.setItem('list-done',arr1);
+						history.go(0);
+					}
+				}(i))
+			}
+		}
+		//localStorage.clear()
+		txt.onkeydown = function(event){//按下回车键to do添加子节点计数器i加一，写入本地
+			if(event.keyCode == 13 && txt.value){
+				
+				var i = localStorage.getItem('i');
+				list[ii] = txt.value;
+				i++;
+				ii++;
+				localStorage.setItem('i',i);
+				localStorage.setItem('list',list);
+				var newn = document.createElement('div');
+				newn.innerHTML = txt.value;
+				doo.appendChild(newn);
+				bun1.value = localStorage.getItem('i');
+					
+				txt.value = "";
+			}
+		}
+		txt.onblur = function(){history.go(0);}
+		
+		
+	
+</script>

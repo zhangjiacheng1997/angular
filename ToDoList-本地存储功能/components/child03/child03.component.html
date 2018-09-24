@@ -1,0 +1,8 @@
+<h2>
+  What has been done <input type="button" [(ngModel)] = "i1">
+</h2>
+<ul>
+  <li *ngFor="let item of arr1 let a = index" (click) = "deall(i)">
+    {{item}}
+  </li>
+</ul>
