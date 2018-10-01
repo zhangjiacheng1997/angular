@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>animate</title>
+	<style>
+        
+		#banner{
+            border:0px solid black;
+            width: 1260px;
+            height: 400px;
+            margin: 0 auto;
+            
+            background-repeat: no-repeat;
+        }
+        #left{
+            border:0px solid black;
+            margin-top:-280px;
+            width: 30px;
+            height: 80px;
+            
+            
+        }
+        #right1{
+            width:40px;
+            height:180px;
+            float: right;
+            opacity:0.3;
+            position: absolute;
+			left: 88%;
+            top: 120px;
+        }
+        .img1{
+            width:40px;
+            height: 150px;
+            opacity:0.3;
+        }
+        #left1{
+            width: 40px;
+            height: 180px;
+            opacity:0.3;
+            position: absolute;
+			left: 9.2%;
+            top: 120px;
+        }
+        #bun{border:0px solid black;
+            width: 300px;
+            height: 30px;
+            margin: 0 auto;
+            position: absolute;
+			left: 44%;
+            top: 370px;
+        }
+        .bun0{
+            border-radius:20px;
+            margin:9px;
+            border:1px solid black;
+            width: 20px;
+            float: left;
+            height: 20px;
+            background-color: #ccc;
+        }
+	</style>
+</head>
+<body>
+   <div>
+       <div id="banner">
+           <img src="images/banner_01.jpg" alt="" id="img">
+           <img src="images/left.png" alt="" id="left1">
+           <img src="images/right.png" alt="" id="right1">
+       </div>
+       <div id="bun">
+           <div class="bun0" id="bun1"></div>
+           <div class="bun0" id="bun2"></div>
+           <div class="bun0" id="bun3"></div>
+           <div class="bun0" id="bun4"></div>
+           <div class="bun0" id="bun5"></div>
+       </div>
+   </div>
+    
+</body>
+<script>
+    window.onload = function(){
+        var bun = document.getElementsByClassName('bun0');
+        var i = 0;
+        var img = document.getElementById('img');
+        var banner = document.getElementById('banner');
+        var arr = ['banner_01.jpg','banner_02.jpg','banner_03.jpg','banner_04.jpg','banner_05.jpg']
+        var left = document.getElementById('left1');
+        bun[0].style.backgroundColor = 'red';
+        bun[0].onclick = function(){img.src = "images/" + arr[0];}
+        for(var a = 0;a<arr.length;a++){(function(a){
+            bun[a].onclick = function(){
+                img.src = "images/" + arr[a];i=a;
+                
+                bun[i].style.backgroundColor = 'red';
+                for(var s = 0;s<5;s++){
+                    if(s!=i)bun[s].style.backgroundColor = '#ccc';
+                }
+                if(i==4){i=-1}
+            }
+        })(a)}
+        setInterval(()=>{
+            i++;
+            bun[i].style.backgroundColor = 'red';
+            for(var b = 0;b<5;b++){
+                if(b!=i)bun[b].style.backgroundColor = '#ccc';
+            }
+            img.src = "images/" + arr[i];
+            if(i >=4){i=-1;}  
+        },2000)
+        left.onclick = function(){
+            if(i==0){i=5};
+            i--;
+            img.src = "images/" + arr[i];
+            console.log(i)
+        }
+        left.onmouseover= function(e){
+            e.target.style.opacity = 0.7;
+        }
+        left.onmouseout= function(e){
+            e.target.style.opacity = 0.3;
+        }
+        var right = document.getElementById('right1');
+        right.onclick = function(){
+            i++
+            if(i==5){i=0}
+            img.src = "images/" + arr[i];
+            console.log(i)
+        }
+        right.onmouseover= function(e){
+            e.target.style.opacity = 1;
+        }
+        right.onmouseout= function(e){
+            e.target.style.opacity = 0.3;
+        }
+        
+    }
+</script>
+</html>

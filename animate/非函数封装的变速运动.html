@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>animate</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			
+			position: absolute;//定位
+			left: 0;
+			top:0;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+</body>
+<script>
+	var box = document.getElementById('box');
+	box.onclick = function(){
+		//匀速运动
+		//var timer = setInterval(function(){
+		//	var now = parseInt(getStyle(box,'left'));
+		//	
+		//	if(now == 500){//到达指定位置停止运动
+		//		clearInterval(timer);
+		//	}
+		//	else{
+		//		box.style.left = now + 1 + 'px';
+		//	}
+		//},30);
+		//变速运动
+		var  timer = setInterval(function(){
+			var now = parseInt(getStyle(box,'left'));
+			var top = parseInt(getStyle(box,'top'));
+			var opa = getStyle(box,'opacity')
+			var speed = Math.ceil((500 - now)/10);
+			if(now == 500||top == 500){
+				clearInterval(timer);
+			}
+			else{console.log(now);console.log(top);
+				box.style.left = now + speed + 'px';
+				box.style.top = top + speed + 'px'
+			}console.log(opa);
+			if(opa>0.1){
+				box.style.opacity = opa - speed/800;
+			}
+		},30)
+		
+	}
+	
+	function move(){
+		animate(box,{left:1000,top:300,opacity:30},function(){
+			console.log(1);
+		})
+	}
+	
+	function animate(obj,json,callback){
+		obj.timer = setInterval(function(){
+			for(var attr in json){
+				if(attr == left){
+					var now = parseInt(getStyle(obj,attr));
+					if(now == getStyle(json,attr)){clearInterval(timer);}
+				}
+			}
+			
+		},30)
+		
+	}
+	
+	function getStyle(obj,attr){//获取某对象的attr属性值
+		if(obj.currentStyle){//获取非行内样式;获得行内样式：document.getElementById('id').style.property
+			return obj.currentStyle[attr];
+		}
+		else{//仅兼容IE
+			return getComputedStyle(obj,null)[attr];
+		}
+	}
+</script>
+</html>
