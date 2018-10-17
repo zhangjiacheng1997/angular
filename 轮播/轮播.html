@@ -83,6 +83,7 @@
     window.onload = function(){
         var bun = document.getElementsByClassName('bun0');
         var i = 0;
+        var i1 = 100;
         var img = document.getElementById('img');
         var banner = document.getElementById('banner');
         var arr = ['banner_01.jpg','banner_02.jpg','banner_03.jpg','banner_04.jpg','banner_05.jpg']
@@ -92,27 +93,43 @@
         for(var a = 0;a<arr.length;a++){(function(a){
             bun[a].onclick = function(){
                 img.src = "images/" + arr[a];i=a;
-                
+                i1 = 100;
                 bun[i].style.backgroundColor = 'red';
                 for(var s = 0;s<5;s++){
                     if(s!=i)bun[s].style.backgroundColor = '#ccc';
                 }
-                if(i==4){i=-1}
+                if(i==4){i=0}
             }
         })(a)}
         setInterval(()=>{
-            i++;
-            bun[i].style.backgroundColor = 'red';
+            
+        },2000)
+        
+        var opa = setInterval(()=>{
+        	img.style.opacity = i1/100;
+        		
+        	i1--;
+        	if(i1 == 20){
+        		i1 = 100;
+        		i++;
+        		bun[i].style.backgroundColor = 'red';
             for(var b = 0;b<5;b++){
                 if(b!=i)bun[b].style.backgroundColor = '#ccc';
             }
-            img.src = "images/" + arr[i];
-            if(i >=4){i=-1;}  
-        },2000)
+        		img.src = "images/" + arr[i];
+        		if(i >=4){i=-1;};
+        	}
+            },40)
+        
         left.onclick = function(){
             if(i==0){i=5};
+            i1 = 100;
             i--;
             img.src = "images/" + arr[i];
+            bun[i].style.backgroundColor = 'red';
+            for(var s = 0;s<5;s++){
+                    if(s!=i)bun[s].style.backgroundColor = '#ccc';
+                }
             console.log(i)
         }
         left.onmouseover= function(e){
@@ -123,9 +140,14 @@
         }
         var right = document.getElementById('right1');
         right.onclick = function(){
+        	 i1 = 100;
             i++
             if(i==5){i=0}
             img.src = "images/" + arr[i];
+            bun[i].style.backgroundColor = 'red';
+            for(var s = 0;s<5;s++){
+                    if(s!=i)bun[s].style.backgroundColor = '#ccc';
+                }
             console.log(i)
         }
         right.onmouseover= function(e){
