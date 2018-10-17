@@ -1,0 +1,122 @@
+#hang{
+    margin-top:10px;
+    border:0px solid rgb(216, 190, 190);
+    width:90%;
+    height:25px;
+    margin: 0 auto;
+}
+#but{
+    border-radius: 20px;
+    margin-left: 520px;
+    
+}
+.presentation{background-color: #ccc;}
+.bun{
+    border:0px solid rgb(216, 190, 190);
+    width: 30px;
+    height: 28px;
+    background-color: #fff;
+    margin: 5px;
+    margin-left: 3px;
+    float: left;
+}
+#people{border:0px solid black;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+#photo{border:0px solid black;
+    width: 170px;
+    height: 110px;
+    float: left;
+}
+#pho{
+    width: 160px;
+    height: 110px;
+    margin-bottom: 10px;
+}
+#pname{ border:0px solid black;
+    height: 10px;
+    color: #ccc;
+    margin-top: 100px;
+}
+a{
+    text-decoration:none;
+    
+}
+#text{
+    border:0px solid black;
+    width: 420px;
+    height: 110px;
+    float: left;
+}
+#t-name{
+    border:0px solid black;
+    width: 420px;
+    height: 40px;
+    float: left;
+}
+#text1{
+    border:0px solid black;
+    width:640px;
+    height: 80px;
+    color: rgb(131, 120, 120);
+    float: left;
+}
+#pho1{
+    width: 40px;
+    height: 40px;
+    border-radius:100px;
+}
+#li li{
+    margin-left:60px;
+    list-style: none;
+}
+#main{border-bottom:1px solid rgb(185, 166, 166);
+    margin-top:10px;
+    margin-left: -20px;
+    width: 700px;
+    height: 150px;
+}
+#ul{
+    border:0px solid black;
+    width: 240px;
+    height: auto;
+    position: absolute;
+  left: 67%;
+  top: 12%;
+}
+#hang{
+    height: 10px;
+}
+
+#wen{
+    color: rgb(143, 162, 168);
+}
+img{
+    width: 28px;
+    height: 26px;
+}
+#body{
+    -moz-box-shadow:0 0 10px #ccc;
+    -webkit-box-shadow:0 0 10px #ccc;
+    box-shadow:0 0 10px #ccc;
+}
+#head{
+    border:1px solid rgb(216, 190, 190);
+    width:700px;
+    height:40px;
+    margin: 0 auto;
+}
+#area1{ border:0px solid rgb(216, 190, 190);
+    width: 700px;
+    margin: 0 auto;
+}
+#area{
+    border:1px solid rgb(216, 190, 190);
+    width:700px;
+    height:180px;
+    margin: 0 auto;
+    
+}

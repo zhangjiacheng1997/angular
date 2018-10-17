@@ -1,0 +1,15 @@
+#head{
+    border:0px solid black;
+    width: 1000px;
+    height: 55px;
+    margin: 0 auto;
+}
+#body{
+    border:0px solid black;
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+}
+*{
+    font-family: "微软雅黑";
+}

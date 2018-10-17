@@ -1,0 +1,31 @@
+<div id="hang"></div>
+<ul>
+  <li *ngFor="let item of text">
+    <div id="main">
+      <div id="people">
+          <img id="pho1" src="{{item.photo}}" alt="">
+      </div>
+      <div id="photo">
+        <img id="pho" src="{{item.image}}" alt="">
+        <span id="pname">{{item.pname}}</span>
+      </div>
+     <div id="text">
+       <div id="t-name">
+         <a href="#"><h5><b>{{item.name}}</b></h5></a>
+       </div>
+       <div>
+         <span id="text1">{{item.text}}</span>
+       </div>
+     </div>
+    </div>
+    
+  </li>
+</ul>
+<div id="ul">
+    <ul id="u-ul">
+        <h4><b>热门话题</b></h4>
+        <hr>
+        <li *ngFor="let it of li">{{it}}<div id="hang"></div></li>
+
+      </ul>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let course of courses;">
+      <a [routerLink]="['/tongbudetail',course.id]"><img src="{{course.images}}" alt=""></a>
+      <h3 id="h3"><a [routerLink]="['/tongbudetail',course.id]">{{course.courseName}}</a></h3>
+      <div id="text">{{course.text}}</div>
+      <div id="bun">
+        &nbsp;<span>任务：{{course.task}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>人数：{{course.person}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-default">申请</button>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav aria-label="Page navigation" id="page"> 
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a [routerLink]="['/togther']">1</a></li>
+    <li><a [routerLink]="['/togther']">2</a></li>
+    <li><a [routerLink]="['/togther']">3</a></li>
+    <li><a [routerLink]="['/togther']">4</a></li>
+    <li><a [routerLink]="['/togther']">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,21 @@
+#head{
+    border:0px solid black;
+    width:65%;
+    height: 55px;
+    float: left;
+}
+#head1{
+    border:0px solid black;
+    width:35%;
+    height: 55px;
+    float: left;
+}
+#ul{
+    border:1px solid rgb(221, 205, 205);
+    width: 100%;
+    height:auto;
+    float: left;
+    -moz-box-shadow:0 0 10px #ccc;
+    -webkit-box-shadow:0 0 10px #ccc;
+    box-shadow:0 0 10px #ccc;
+}

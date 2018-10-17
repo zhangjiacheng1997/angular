@@ -1,0 +1,16 @@
+
+<div id="container">
+  
+  
+    <ul class="nav nav-tabs"><h3><a [routerLink]="['/togther']">同步课</a>/{{course?.courseName}}</h3>
+      <div id="hang"></div>
+      <li role="presentation"><a [routerLink]="['/tongbudetail/:courseId/tongbu-text' ,courseId]">简介</a></li>
+      <li role="presentation"><a [routerLink]="['/tongbudetail/:courseId/tongbu-hudong' ]">互动</a></li>
+      <li role="presentation"><a [routerLink]="['/tongbudetail/:courseId/tongbu-job']">任务<span class="badge">{{course?.task}}</span></a></li>
+      <li role="presentation"><a id="aa" [routerLink]="['/tongbudetail/:courseId/tongbu-people' ,courseId]">成员<span class="badge">{{course?.person}}</span></a></li>
+    </ul>
+    <div id="hang"></div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

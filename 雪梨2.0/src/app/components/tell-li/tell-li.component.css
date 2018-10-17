@@ -1,0 +1,12 @@
+#ul{
+    border:0px solid black;
+    width: 100%;
+    height: auto;
+    float: left;
+    -moz-box-shadow:0 0 10px #ccc;
+    -webkit-box-shadow:0 0 10px #ccc;
+    box-shadow:0 0 10px #ccc;
+}
+#hang{
+    height: 15px;
+}

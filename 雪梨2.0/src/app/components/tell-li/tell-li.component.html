@@ -1,0 +1,19 @@
+<div id="head">
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a  [routerLink]="['/main/tell-li/say-area']" >@我的</a></li>
+        <li role="presentation"><a [routerLink]="['/main/tell-li/say-area1']">收到的赞</a></li>
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              评论 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li role="presentation"><a  [routerLink]="['/main/tell-li/say-area']">收到的评论</a></li>
+              <li role="presentation"><a [routerLink]="['/main/tell-li/say-area']">发出的评论</a></li>
+            </ul>
+          </li>
+    </ul>
+</div>
+<div id="hang"></div>
+<div id="ul">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,23 @@
+#name{
+    border:1px solid rgb(224, 197, 197);
+    
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+}
+#hang{
+    border:0px solid black;
+    width: 100%;
+    height: 10px;
+}
+#own{
+    border:1px solid rgb(224, 197, 197);
+    border-top:0px solid rgb(224, 197, 197);
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+    background-color: antiquewhite;
+}
+#num{
+    float:right;
+}

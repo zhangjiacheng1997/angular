@@ -1,0 +1,12 @@
+#li{
+    border:1px solid rgb(245, 227, 227);
+    background-color: rgb(241, 244, 247);
+    height: 90px;
+    border-radius:2%
+}
+#span{
+    color: rgb(187, 176, 187);
+}
+#aa{
+    float: right;
+}

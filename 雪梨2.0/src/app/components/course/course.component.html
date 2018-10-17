@@ -1,0 +1,71 @@
+<div class="btn-group" role="group" aria-label="...">
+    
+    <div id="hang"></div>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        课程分类
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        
+        <li><a>WEB 前端开发</a></li>
+        <li><a>WEB 后端开发</a></li>
+        <li><a >移动应用开发</a></li>
+        <li><a>软件测试</a></li>
+        <li><a >数据库</a></li>
+        <li><a >基础知识&实用工具</a></li>
+        
+      </ul>
+    </div>
+    
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          课程体系
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a>计算机基础技能</a></li>
+            <li><a>Web前端工程师</a></li>
+            <li><a>Android开发工程师</a></li>
+            <li><a>MySQL数据库工程师</a></li>
+            <li><a>产品设计</a></li>
+            <li><a>软件测试工程师</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">全部体系</a></li>
+        </ul>
+      </div>
+  </div>
+  <div id="hang"></div>
+<div class="container">
+    <ul>
+      <li *ngFor="let course of courses;">
+        <a [routerLink]="['/tongbudetail',course.id]"><img src="{{course.images}}" alt=""></a>
+        <h4 id="h3"><a [routerLink]="['/tongbudetail',course.id]">{{course.courseName}}</a></h4>
+        <div id="text">{{course.text}}</div>
+        <div id="bun">
+          &nbsp;<span>任务：{{course.task}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>人数：{{course.person}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+        </div>
+      </li>
+    </ul>
+  </div>
+  <nav aria-label="Page navigation" id="page"> 
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a [routerLink]="['/togther']">1</a></li>
+      <li><a [routerLink]="['/togther']">2</a></li>
+      <li><a [routerLink]="['/togther']">3</a></li>
+      <li><a [routerLink]="['/togther']">4</a></li>
+      <li><a [routerLink]="['/togther']">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>

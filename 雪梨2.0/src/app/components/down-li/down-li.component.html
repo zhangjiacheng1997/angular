@@ -1,0 +1,16 @@
+<div id="hang"></div>
+<br>
+<ul class="nav nav-pills nav-stacked">
+    <li *ngFor="let job of jobs">
+      <div id="name">
+        
+        <h4>&nbsp;{{job.name}} <span class="badge">良好</span><span id="num">{{job.num}}/10&nbsp;&nbsp;</span></h4>
+        
+      </div>
+      <div id="own">
+          <div id="hang"></div>
+          &nbsp;{{job.own}}
+        </div>
+      <div id="hang"></div>
+    </li>
+</ul>
