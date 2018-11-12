@@ -1,0 +1,41 @@
+<ion-header>
+  <div id="inp" >
+    <input class="in" type="text"  (click)="fun($event)" (blur)="fun1($event)" placeholder="☠双12特惠好物超低价">
+  </div>
+  <img id="banner" width="96%" src="../../assets/imgs/banner02.png" alt="">
+  <div id="text">
+    <span>罗得蒙简约植绒布艺沙发</span><br><br>
+    <span id="mon">RMB&nbsp;6500</span>
+  </div>
+  
+</ion-header>
+
+<ion-content padding>
+ <div id="ul">
+    <li (click)="color($event,0)" id="yellow">客厅</li>
+    <li (click)="color($event,1)">卧室</li>
+    <li (click)="color($event,2)">餐厅</li>
+    <li (click)="color($event,3)">书房</li>
+    <li (click)="color($event,4)">门厅</li>
+ </div>
+ <div id="biao">
+   <img width="40px"alt="" class="xian">
+    <p class="biaoti">&nbsp;沙发&nbsp;</p>
+    <img width="40px" alt="" class="xian"><img id="shai" src="../../assets/imgs/筛选.png" alt="">
+ </div>
+    
+    <div id="black"></div>
+
+    <div id="main">
+      <div *ngFor="let item of imgs">
+      <img id="shafa" src="{{item}}" alt="">
+      </div>
+    </div>
+
+    <div id="biao1">
+     <img width="40px"  alt="" class="xian">
+      <p class="biaoti">&nbsp;电视柜&nbsp;</p>
+    <img width="40px" alt="" class="xian"><img id="shai" src="../../assets/imgs/筛选.png" alt="">
+  </div>
+  
+</ion-content>

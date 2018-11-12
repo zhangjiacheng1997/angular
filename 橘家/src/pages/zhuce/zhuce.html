@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ZhucePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar color="trans">
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="body">
+  <ion-icon ios="ios-phone-portrait"  md="md-phone-portrait" id="phone"></ion-icon>
+  <ion-icon name="ios-key-outline" id="key"></ion-icon>
+  <ion-icon ios="ios-unlock-outline" id="lock"></ion-icon>
+  <div id="black"></div>
+  <ion-list>
+
+    <ion-item class="item">
+        <ion-input type="text" placeholder="&nbsp;手机号"></ion-input>
+    </ion-item>
+  
+    <ion-item class="item">
+      <ion-input type="password" placeholder="&nbsp;验证码"></ion-input>
+    </ion-item><div id="time">倒计时{{i}}s</div>
+    <ion-item class="item">
+        <ion-input type="password" placeholder="&nbsp;密码"></ion-input>
+      </ion-item>
+  </ion-list>
+  
+
+      <button ion-button block color="org" (click)="time()">注册</button>
+  <p>已有账号？<a>立即登录</a></p>
+
+</ion-content>

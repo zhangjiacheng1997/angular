@@ -1,0 +1,61 @@
+page-a {
+    .img{
+        border:0px solid black;
+        width: 100%;
+        height: 33.3%;
+        padding-top: 40px;
+    }
+
+   #img1{
+       background: url("../../assets/imgs/灵感1.png");
+       background-size: cover;
+   }
+   #img2{
+    background: url("../../assets/imgs/灵感2.png");
+    background-size: cover;
+}
+#img3{
+    background: url("../../assets/imgs/灵感3.png");
+    background-size: cover;
+}
+#he{
+    position: absolute;
+        top:60px;
+        left: 104px;
+        
+}
+#ta{
+    position: absolute;
+        top:450px;
+        left: 130px;
+        
+}
+#lan{
+    position: absolute;
+        top:255px;
+        left: 104px;
+        
+}
+hr{
+    color: #fff;
+}
+p{
+    font-size: 13px;
+    color: #fff;
+}
+    h5{
+        margin: -5px;
+        margin-top: 20px;
+        text-align: center;
+        color: aliceblue;
+    }
+    .black{
+        margin:0 auto;
+        padding-top:0px;
+        background-color: black;
+        opacity: 0.3;
+        width:200px;
+        height: 120px;
+    }
+
+}

@@ -1,0 +1,104 @@
+page-my {
+    
+    #banner{border:0px solid black;
+        width: 100%;
+        height: 180px;
+        background: url("../../assets/imgs/banner.png");
+        background-size:400px;
+    }
+    #photo{border:0px solid black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top:35px;
+        left:125px;
+    }
+    h3{
+        position: absolute;
+        top:125px;
+        left:157px; 
+    }
+    span{
+        float: right;
+        color: rgb(153, 153, 160);
+    }
+    #bun{
+        background-color:rgb(250, 244, 244);
+    }
+    #my{border:0px solid black;
+        width: 100%;
+        height: 90px;
+        margin-top: -32px;
+    }
+    .my{border:2px solid rgb(250, 244, 244);
+        width: 33.3%;
+        height: 90px;
+        float: left;
+        
+    }
+   #oo{background: #fc3;}
+    ion-content{border:1px solid black;
+        width: 109%;
+        margin-left:-5%; 
+        margin-top:-17px;
+    }
+    
+    .my_span{border:0px solid black;
+        color: black;
+        margin-left:33px;
+        float: left;
+    }
+    #thing{
+        border-top:4px solid rgb(250, 244, 244);
+        height: 286px;
+        width: 92%;
+        position: absolute;
+        top:150px;
+        left: 18px;
+    }
+    #gouwu{border:0px solid #000;
+        width: 59px;
+        height: 10px;
+        position: absolute;
+        top:78px;
+        left: 47px;
+
+    }
+    img{
+        margin-left: 15px;
+        text-align: center;
+
+    }
+    .fa{
+        margin-top:0px;
+        margin-left:0px;
+        color: black;
+    }
+    #shoucang{border:0px solid #000;
+        width: 59px;
+        height: 10px;
+        position: absolute;
+        top:78px;
+        left: 171px;
+
+    }
+    #guanzhu{border:0px solid #000;
+        width: 59px;
+        height: 20px;
+        position: absolute;
+        top:85px;
+        left: 295px;
+
+    }
+    .thing{border:2px solid rgb(250, 244, 244);
+        float: left;
+        height: 33.4%;
+        width: 50%;
+    }
+    .img1{
+        margin-top: 30px;
+        margin-left: 72px;
+    }
+    
+}

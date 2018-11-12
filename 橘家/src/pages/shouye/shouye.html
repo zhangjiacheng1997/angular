@@ -1,0 +1,160 @@
+<!--
+  Generated template for the ShouyePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+    <div id="head">
+      <ion-icon name="ios-search" id="search" (click)="search()"></ion-icon>
+      <img width="35px" class="img" src="../../assets/imgs/桔家.png" alt=""><br>
+      <img width="45px" class="tex" src="../../assets/imgs/ORANGE HOUSE.png" alt="">
+    </div>
+    
+
+    
+<div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="tuijian">
+        推荐
+      </ion-segment-button>
+      <ion-segment-button value="jiajv">
+        家居
+      </ion-segment-button>
+      <ion-segment-button value="canchu" (click)="home()">
+        餐厨
+      </ion-segment-button>
+      <ion-segment-button value="chuangshang">
+        床上用品
+      </ion-segment-button>
+    </ion-segment>
+</div>
+      
+
+</ion-header>
+
+
+<ion-content padding>
+  
+<div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'tuijian'">
+      <ion-item>
+        <!-- 轮播 -->
+  <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+    <ion-slide>
+      <img src="assets/imgs/slide1.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/slide1.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/slide1.png" alt="">
+    </ion-slide>
+  </ion-slides>
+  <div class="subtitle">
+      <h3 text-center>热|门|推|荐</h3>
+      <p text-center>RECOMMENDATION</p>
+  </div>
+  <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+  <ul class="goods">
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色—— </p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        
+    </ul>
+      </ion-item>
+      
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'jiajv'">
+              <!-- 轮播 -->
+  <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+    <ion-slide>
+      <img src="assets/imgs/slide1.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/slide1.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/slide1.png" alt="">
+    </ion-slide>
+    
+  </ion-slides>
+  <div>
+    <div class="jiajv"><img width="100px" src="../../assets/imgs/客厅.png" alt=""><h4 id="ke">客厅</h4></div>
+    <div class="jiajv"><img width="100px" src="../../assets/imgs/书房.png" alt=""><h4 id="shu">书房</h4></div>
+    <div class="jiajv"><img width="100px" src="../../assets/imgs/门厅.png" alt=""><h4 id="men">门厅</h4></div>
+  </div>
+  <div class="subtitle">
+      <h4 text-center>橘|子|家|居</h4>
+      <p text-center>Orange household</p>
+  </div>
+  <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+  <ul class="goods">
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="assets/imgs/img1.png" alt="">
+          <p>——北欧原木色—— </p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        
+    </ul>
+      
+    </ion-list>
+  </div>
+      
+       
+</ion-content>

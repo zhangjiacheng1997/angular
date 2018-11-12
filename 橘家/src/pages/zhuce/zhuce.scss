@@ -1,0 +1,48 @@
+
+page-zhuce{
+    ion-content{
+        background: url("../../assets/imgs/zhuce-bg.png") no-repeat;
+        background-size:cover; 
+    }
+    #box{
+        opacity: 100%;
+    }
+    .item{
+        background: transparent;
+    }
+    p{
+        text-align: center;
+        
+    }
+    #phone{
+        color: beige;
+        position: absolute;
+        top: 30px;
+    }
+    #key{
+        color: beige;
+        position: absolute;
+        top: 74px;
+    }
+    #lock{
+        color: beige;
+        position: absolute;
+        top: 117px;
+    }
+    #time{
+        color: #ccc;
+        position: absolute;
+        top: 70px;
+        left:280px;
+    }
+    #black{
+        position: absolute;
+        top: 60px;
+        left:260px;
+        width: 100px;
+        height: 43px;
+        background-color: black;
+        opacity: 0.2;
+    }
+}
+

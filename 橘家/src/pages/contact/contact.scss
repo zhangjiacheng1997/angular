@@ -1,0 +1,41 @@
+page-contact {
+    background-color: #fc3;
+    #ul{border:0px solid #000;
+        width: 100%;
+        height: 450px;
+        margin-top:50px;
+        padding: 50px;
+        li{border:0px solid #000;
+            list-style: none;
+            float: left;
+            border-radius: 50%;
+            background-color: #fff;
+           
+            width: 100px;
+            height: 100px;
+            margin: 18px;
+            margin-bottom: 80px;
+           .icon1{border:0px solid #000;
+                font-size: 90px;
+                margin-top: 6px;
+                margin-left: 13px;
+           }
+           #man{
+            margin-left: 22px;
+           }
+           #book{
+               margin-left: 17px;
+           }
+           h5{
+               text-align: center;
+           }
+           p{
+                text-align: center;
+           }
+        }
+        #color{
+                background-color: #666;
+           }
+    }
+    
+}

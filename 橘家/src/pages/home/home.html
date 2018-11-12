@@ -1,0 +1,63 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-slides (ionSlideWillChange)="change()" autoplay="2000" speed="600" loop class="slide" pager>
+
+        <ion-slide style="background-color: green">
+          <h2>Slide 1</h2>
+        </ion-slide>
+      
+        <ion-slide style="background-color: blue">
+          <h2>Slide 2</h2>
+        </ion-slide>
+      
+        <ion-slide style="background-color: red">
+          <h2>Slide 3</h2>
+        </ion-slide>
+      
+      </ion-slides>
+      <c #ac></c>
+      <input type="text" #inp>
+      <bUtton ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </bUtton>
+
+      <div padding>
+          <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="kittens">
+              Kittens
+            </ion-segment-button>
+            <ion-segment-button value="puppies">
+              Puppies
+            </ion-segment-button>
+          </ion-segment>
+      </div>
+      <div [ngSwitch]="pet">
+          <ion-list *ngSwitchCase="'puppies'">
+            <ion-item>
+              <ion-thumbnail item-start>
+                
+              </ion-thumbnail>
+              <h2>Ruby</h2>
+            </ion-item>
+            
+          </ion-list>
+        
+          <ion-list *ngSwitchCase="'kittens'">
+            <ion-item>
+              <ion-thumbnail item-start>
+              
+              </ion-thumbnail>
+              <h2>Luna</h2>
+            </ion-item>
+            
+          </ion-list>
+        </div>
+
+  <button ion-button block  >跳转</button>
+  <button ion-button block (click) = "zhuce(inp.value)" >注册</button>
+</ion-content>
